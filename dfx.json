@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "canisters": {
+    "devsage_backend": {
+      "type": "motoko",
+      "main": "src/devsage_backend/main.mo"
+    },
+    "devsage_frontend": {
+      "type": "assets",
+      "source": ["out/"]
+    },
+    "internet_identity": {
+      "type": "pull",
+      "id": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral",
+      "replica": {
+        "subnet_type": "system"
+      }
+    },
+    "ic": {
+      "providers": ["https://ic0.app"],
+      "type": "persistent"
+    }
+  }
+}
